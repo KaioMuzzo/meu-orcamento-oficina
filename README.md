@@ -1,7 +1,7 @@
 ## 📂 Estrutura de Arquivos
 
 Aqui está a organização das pastas e principais arquivos do projeto:
-
+```text
 meu-orcamento-oficina/
 ├── 📁 assets/
 │   ├── 📁 css/
@@ -28,7 +28,7 @@ meu-orcamento-oficina/
 ├── index.html                   
 ├── README.md                    (Documentação do projeto)
 └── firebase.json
-
+```
 🎨 Paleta Profissional e Moderna
 Cor			Código HEX		Uso
 Verde suave		#10B981			Sucesso / orçamentos aprovados
