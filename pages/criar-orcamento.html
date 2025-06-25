@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Serviço</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <form class="search-form" action="/pesquisar" method="get" role="search">
+            <div class="search-bar">
+                <label for="searchInput" class="visually-hidden">Pesquisar no site</label>
+                <input class="search-input" type="search" id="searchInput" name="q" placeholder="Pesquisar...">
+                <button class="search-button" type="submit" aria-label="Iniciar pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+        <div class="total-price">
+            <span class="currency">R$</span> 00,00
+        </div>
+    </header>
+
+    <!-- LISTA DE SERVIÇOS -->
+    <main class="services-list">
+        <ul>
+            <!-- Item 1: Veículo -->
+            <li class="service-item">
+                <div class="item-icon">
+                    <i class="fa-solid fa-car-side fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Volkswagen Gol</h4>
+                    <p>2017</p>
+                    <p>ABC-1234</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                </div>
+            </li>
+
+            <!-- Item 2: Funilaria -->
+            <li class="service-item">
+                <div class="item-icon">
+                    <i class="fa-solid fa-door-closed fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Funilaria</h4>
+                    <p>Porta Dianteira Direita</p>
+                    <p class="description">Desamassamento e preparação da peça</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 280,00</span>
+                </div>
+            </li>
+
+            <!-- Item 3: Pintura -->
+            <li class="service-item">
+                <div class="item-icon">
+                    <i class="fa-solid fa-spray-can-sparkles fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Pintura</h4>
+                    <p>Porta Dianteira Direita</p>
+                    <p class="description">Pintura com tinta PU na cor original</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 350,00</span>
+                </div>
+            </li>
+            
+            <!-- Item 4: Substituição -->
+            <li class="service-item">
+                <div class="item-icon">
+                    <!-- Ícone de peça de carro como substituto para o paralama -->
+                    <i class="fa-solid fa-car-wrench fa-2x"></i> 
+                </div>
+                <div class="item-details">
+                    <h4>Substituição</h4>
+                    <p>Paralama Dianteiro Esquerdo</p>
+                    <p class="description">Peça nova + mão de obra</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 600,00</span>
+                </div>
+            </li>
+            
+            <!-- Item 5: Alinhamento -->
+            <li class="service-item">
+                <div class="item-icon">
+                        <!-- Ícone genérico de carro para o parachoque -->
+                    <i class="fa-solid fa-car-on fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Alinhamento e Reparo</h4>
+                    <p>Para-choque Traseiro</p>
+                    <p class="description">Reparo térmico e alinhamento geral</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 250,00</span>
+                </div>
+            </li>
+
+            <!-- Item 5: Alinhamento -->
+            <li class="service-item">
+                <div class="item-icon">
+                        <!-- Ícone genérico de carro para o parachoque -->
+                    <i class="fa-solid fa-car-on fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Alinhamento e Reparo</h4>
+                    <p>Para-choque Traseiro</p>
+                    <p class="description">Reparo térmico e alinhamento geral</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 250,00</span>
+                </div>
+            </li>
+
+            <!-- Item 5: Alinhamento -->
+            <li class="service-item">
+                <div class="item-icon">
+                        <!-- Ícone genérico de carro para o parachoque -->
+                    <i class="fa-solid fa-car-on fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Alinhamento e Reparo</h4>
+                    <p>Para-choque Traseiro</p>
+                    <p class="description">Reparo térmico e alinhamento geral</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 250,00</span>
+                </div>
+            </li>
+
+            <!-- Item 5: Alinhamento -->
+            <li class="service-item">
+                <div class="item-icon">
+                        <!-- Ícone genérico de carro para o parachoque -->
+                    <i class="fa-solid fa-car-on fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Alinhamento e Reparo</h4>
+                    <p>Para-choque Traseiro</p>
+                    <p class="description">Reparo térmico e alinhamento geral</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 250,00</span>
+                </div>
+            </li>
+
+            <!-- Item 5: Alinhamento -->
+            <li class="service-item">
+                <div class="item-icon">
+                        <!-- Ícone genérico de carro para o parachoque -->
+                    <i class="fa-solid fa-car-on fa-2x"></i>
+                </div>
+                <div class="item-details">
+                    <h4>Alinhamento e Reparo</h4>
+                    <p>Para-choque Traseiro</p>
+                    <p class="description">Reparo térmico e alinhamento geral</p>
+                </div>
+                <div class="item-action">
+                    <button class="remove-btn"><i class="fa-solid fa-minus"></i></button>
+                    <span class="item-price">R$ 250,00</span>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <!-- BARRA DE NAVEGAÇÃO INFERIOR -->
+    <footer class="bottom-nav">
+        <button><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="add-button"><i class="fa-solid fa-plus"></i></button>
+        <button><i class="fa-solid fa-check"></i></button>
+    </footer>
+
+</body>
+</html>
