@@ -29,7 +29,7 @@ meu-orcamento-oficina/
 ├── README.md                    (Documentação do projeto)
 └── firebase.json
 ```
-### 🎨 Paleta Profissional e Moderna
+## 🎨 Paleta Profissional e Moderna
 ```text
 Cor				Código HEX		Uso
 Verde suave			#10B981			Sucesso / orçamentos aprovados
@@ -37,7 +37,7 @@ Vermelho alaranjado		#F87171			Erros / pendências / recusas
 Amarelo escuro			#FBBF24			Avisos ou “em andamento”
 ```
 
-### 🗺️ Telas do App (Mobile)
+## 🗺️ Telas do App (Mobile)
 ```text
 🔑 Autenticação
 	Login
