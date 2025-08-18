@@ -8,10 +8,11 @@
         <input type="text" id="name-search" name="name-search" placeholder="Pesquisar item">
     </div>
 </header>
+
 <main>
     <div class="clients-title">
         <h1>Meus clientes</h1>
-        <button type="button">+ Novo cliente</button>
+        <button id="new-client" type="button">+ Novo cliente</button>
     </div>
 
     <ul class="clients-list">
@@ -23,6 +24,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -31,6 +33,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -39,6 +42,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -47,6 +51,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -55,6 +60,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -63,6 +69,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -71,6 +78,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -79,6 +87,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -87,6 +96,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -97,3 +107,33 @@
         </li>
     </ul>
 </main>
+
+<div class="new-client-menu" id="new-client-menu">
+    <img src="assets/images/sua-logo-preta.png" alt="logo da empresa">
+    <div class="div-form-new-client">
+        <h1>Novo cliente</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="client-name"><input type="text" id="client-name" name="client-name" placeholder="Nome"></label>
+            </div>
+
+            <div class="form-group">
+                <label for="client-lastname"><input type="text" id="client-lastname" name="client-lastname" placeholder="Sobrenome"></label>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="client-email"><input type="email" id="client-email" name="client-email" placeholder="Email"></label>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="client-phone"><input type="tel" id="client-phone" name="client-phone" placeholder="Telefone"></label>
+            </div>
+            
+            <button class="full-width" type="submit">Criar novo cliente</button>
+        </form>
+        <div class="divider">
+            <p>Ou</p>
+        </div>
+        <p class="return-text">O cliente pode esperar? <strong id="return-button">Voltar</strong></p>
+    </div>
+</div>

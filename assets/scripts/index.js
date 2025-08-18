@@ -32,6 +32,22 @@ bottomLinks.forEach(bLink => {
     })
 })
 
+function initClients() {
+    const newClient = document.getElementById("new-client")
+    const returnButton = document.getElementById("return-button")
+    newClient.addEventListener("click", () => {
+        document.getElementById("new-client-menu").style.display = "flex";
+    })
+
+    returnButton.addEventListener("click", () => {
+        document.getElementById("new-client-menu").style.display = "none";
+    })
+}
+
+function initPage(page) {
+    if (page === "clientes") initClients();
+}
+
 function textNormalize(str) {
     return str
         .trim()
@@ -52,6 +68,7 @@ function alterPage(page) {
     .then(res => res.text())
     .then(data => {
         content.innerHTML = data
+        initPage(page)
     })
     .catch(() => {
         content.innerHTML = "<h2>Erro ao carregar a página</h2>"
