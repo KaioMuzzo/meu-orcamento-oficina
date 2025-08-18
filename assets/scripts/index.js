@@ -1,3 +1,5 @@
+import { saveClient, listClients } from "./firebase.js"
+
 const links = document.querySelectorAll(".navigation")
 const content = document.getElementById("contentBody")
 const bottomLinks = document.querySelectorAll(".bottom-navigation")
@@ -32,16 +34,61 @@ bottomLinks.forEach(bLink => {
     })
 })
 
-function initClients() {
+function initClients() {    
     const newClient = document.getElementById("new-client")
+    const newClientMenu = document.getElementById("new-client-menu")
     const returnButton = document.getElementById("return-button")
+    const newClientForm = document.getElementById("new-client-form")
+    const addSuccess = document.getElementById("add-success")
+    const successButton = document.getElementById("success-button")
+
+    listCustomers()
+
     newClient.addEventListener("click", () => {
-        document.getElementById("new-client-menu").style.display = "flex";
+        newClientMenu.style.display = "flex"
     })
 
     returnButton.addEventListener("click", () => {
-        document.getElementById("new-client-menu").style.display = "none";
+        newClientMenu.style.display = "none"
     })
+
+    successButton.addEventListener("click", () => {
+        listCustomers()
+        addSuccess.style.display = "none"
+    })
+
+    newClientForm.addEventListener("submit", async (e) => {
+        e.preventDefault()
+
+        const clientName = document.getElementById("client-name").value
+        const clientLastname = document.getElementById("client-lastname").value
+        const clientEmail = document.getElementById("client-email").value
+        const clientPhone = document.getElementById("client-phone").value
+        await saveClient(clientName, clientLastname, clientEmail, clientPhone)
+        addSuccess.style.display = "flex"
+        newClientMenu.style.display = "none"
+        newClientForm.reset()
+    })
+}
+
+async function listCustomers() {
+    const clientsList = document.getElementById("clients-list")
+    const clients = await listClients()
+
+    clients.forEach(client => {
+        const clientFullName = `${client.clientName} ${client.clientLastname}`
+        const clientPhone = client.clientPhone
+        const clientEmail = client.clientEmail
+
+        const div = document.createElement("div")
+        div.classList = "clients-list-divider"
+
+        clientsList.appendChild(clientAddList(clientFullName, clientPhone, clientEmail))
+        clientsList.appendChild(div)
+    })
+
+    const divs = clientsList.querySelectorAll("div")
+    divs[divs.length - 1].remove();
 }
 
 function initPage(page) {
@@ -73,4 +120,28 @@ function alterPage(page) {
     .catch(() => {
         content.innerHTML = "<h2>Erro ao carregar a página</h2>"
     })
+}
+
+// Parte que cria Elementos HTML
+function clientAddList(clientName, clientPhone, clientEmail) {
+    const li = document.createElement("li")
+    const img = document.createElement("img")
+    const div = document.createElement("div")
+    const h3 = document.createElement("h3")
+    const pPhone = document.createElement("p")
+    const pEmail = document.createElement("p")
+
+    img.src = "assets/images/perfil.png"
+    img.alt = "foto do cliente"
+    h3.textContent = clientName
+    pPhone.textContent = clientPhone
+    pEmail.textContent = clientEmail
+
+    div.appendChild(h3)
+    div.appendChild(pPhone)
+    div.appendChild(pEmail)
+    li.appendChild(img)
+    li.appendChild(div)
+
+    return li
 }

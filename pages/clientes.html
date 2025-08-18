@@ -15,7 +15,7 @@
         <button id="new-client" type="button">+ Novo cliente</button>
     </div>
 
-    <ul class="clients-list">
+    <ul class="clients-list" id="clients-list">
         <li>
             <img src="assets/images/perfil.png" alt="cliente">
             <div>
@@ -105,6 +105,7 @@
                 <p>Email: cliente@email.com</p>
             </div>
         </li>
+        <div class="clients-list-divider"></div>
     </ul>
 </main>
 
@@ -112,7 +113,7 @@
     <img src="assets/images/sua-logo-preta.png" alt="logo da empresa">
     <div class="div-form-new-client">
         <h1>Novo cliente</h1>
-        <form action="">
+        <form action="" id="new-client-form">
             <div class="form-group">
                 <label for="client-name"><input type="text" id="client-name" name="client-name" placeholder="Nome"></label>
             </div>
@@ -135,5 +136,15 @@
             <p>Ou</p>
         </div>
         <p class="return-text">O cliente pode esperar? <strong id="return-button">Voltar</strong></p>
+    </div>
+</div>
+
+<div class="add-success" id="add-success">
+    <img src="assets/images/sua-logo-preta.png" alt="logo da empresa">
+    <div>
+        <img src="assets/images/confirmacao.png" alt="confirmação visual do processo">
+        <h1>Cliente adicionado com sucesso!</h1>
+        <p>Agora você pode ver ele na lista.</p>
+        <button type="button" id="success-button">Voltar para a lista</button>
     </div>
 </div>
