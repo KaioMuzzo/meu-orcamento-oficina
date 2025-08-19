@@ -7,6 +7,8 @@ const bottomLinks = document.querySelectorAll(".bottom-navigation")
 checkAuth((user) => {
     if(!user) {
         window.location.href = "pages/login.html"
+    } else {
+        alterPage("orcamento")
     }
 })
 
