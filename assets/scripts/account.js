@@ -1,6 +1,6 @@
 import { login, register } from "./firebase.js"
 
-if (window.location.pathname === "/pages/cadastro.html") {
+if (window.location.pathname === "pages/cadastro.html") {
     const userRegister = document.getElementById("user-register")
 
     userRegister.addEventListener("submit", async (e) => {
@@ -15,7 +15,7 @@ if (window.location.pathname === "/pages/cadastro.html") {
     })
 }
 
-if (window.location.pathname === "/pages/login.html") {
+if (window.location.pathname === "pages/login.html") {
     const userLogin = document.getElementById("user-login")
 
     userLogin.addEventListener("submit", async (e) => {
