@@ -1,4 +1,4 @@
-import { saveClient, listClients } from "./firebase.js"
+import { saveClient, getClients } from "./firebase.js"
 
 const links = document.querySelectorAll(".navigation")
 const content = document.getElementById("contentBody")
@@ -41,8 +41,9 @@ function initClients() {
     const newClientForm = document.getElementById("new-client-form")
     const addSuccess = document.getElementById("add-success")
     const successButton = document.getElementById("success-button")
+    const menuSearch = document.getElementById("menu-search")
 
-    listCustomers()
+    listClients()
 
     newClient.addEventListener("click", () => {
         newClientMenu.style.display = "flex"
@@ -53,8 +54,13 @@ function initClients() {
     })
 
     successButton.addEventListener("click", () => {
-        listCustomers()
+        listClients()
         addSuccess.style.display = "none"
+    })
+
+    menuSearch.addEventListener("submit", (e) => {
+        e.preventDefault()
+        listClients()
     })
 
     newClientForm.addEventListener("submit", async (e) => {
@@ -71,9 +77,11 @@ function initClients() {
     })
 }
 
-async function listCustomers() {
+async function listClients() {
     const clientsList = document.getElementById("clients-list")
-    const clients = await listClients()
+    const nameSearch = document.getElementById("name-search").value
+    const clients = await getClients(nameSearch)
+    clientsList.innerHTML = "";
 
     clients.forEach(client => {
         const clientFullName = `${client.clientName} ${client.clientLastname}`
@@ -88,7 +96,7 @@ async function listCustomers() {
     })
 
     const divs = clientsList.querySelectorAll("div")
-    divs[divs.length - 1].remove();
+    if(divs.length > 0) divs[divs.length - 1].remove()
 }
 
 function initPage(page) {
@@ -127,7 +135,7 @@ function clientAddList(clientName, clientPhone, clientEmail) {
     const li = document.createElement("li")
     const img = document.createElement("img")
     const div = document.createElement("div")
-    const h3 = document.createElement("h3")
+    const h3 = document.createElement("h1")
     const pPhone = document.createElement("p")
     const pEmail = document.createElement("p")
 

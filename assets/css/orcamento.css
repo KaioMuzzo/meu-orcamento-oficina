@@ -1,0 +1,185 @@
+.budget-header {
+    margin-top: 2.75rem;
+    margin-inline: 1.50rem;
+}
+
+.budget-header .menu-infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.budget-header .menu-infos h1 {
+    font-weight: 600;
+    font-size: 1.12rem;
+    line-height: 1.5rem;
+    color: var(--jet);
+}
+
+.budget-header .menu-infos i {
+    font-size: 1.5rem;
+}
+
+.budget-header div.divider {
+    margin-top: 0.62rem;
+    margin-bottom: 1.62rem;
+    border-bottom: 0.5px solid #D8D8D3;
+}
+
+.budget-customer {
+    margin-inline: 1.50rem;
+    margin-bottom: 1.62rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.budget-customer .customer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.budget-customer .customer-info h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--jet);
+}
+
+.budget-customer .customer-info p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--jet-light);
+}
+
+.budget-catalogs {
+    margin-inline: 1.50rem;
+    margin-bottom: 0.81rem;
+    background-color: #EEEBE5;
+    border-radius: 16px;
+    padding: 1rem;
+    padding-top: 1.37rem;
+}
+
+.budget-catalogs div.budget-catalog {
+    border-radius: 16px;
+    background-color: var(--isabelline-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.00rem 1.00rem 1.00rem 0.50rem;
+    margin-bottom: 0.75rem;
+}
+
+.budget-catalogs .budget-catalog div {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.budget-catalogs .budget-catalog div p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.87rem;
+    line-height: 1.25rem;
+    color: var(--jet);
+}
+
+.budget-catalogs .budget-buttons {
+    margin-top: 1.62rem;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.budget-catalogs .budget-buttons button {
+    width: 8.91rem;
+    height: 1.68rem;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.87rem;
+    line-height: 100%;
+}
+
+.budget-catalogs .budget-buttons button.edit-item {
+    background-color: var(--primary-color);
+}
+
+.budget-catalogs .budget-buttons button.remove-item {
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px 0px #0303031A;
+}
+
+.budget-checkout {
+    margin-inline: 1.50rem;
+    border-radius: 16px;
+    background-color: #EEEBE5;
+    padding: 1rem;
+    padding-top: 1.37rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.budget-checkout .apply-discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.12rem;
+}
+
+.budget-checkout .apply-discount h2 {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--jet);
+}
+
+.budget-checkout .apply-discount p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: var(--jet-light);
+}
+
+.budget-checkout .subtotal, .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.budget-checkout .subtotal h2, .subtotal p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.87rem;
+    line-height: 1.25rem;
+    color: var(--jet);
+}
+
+.budget-checkout .total h2, .total p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: var(--jet);
+}
+
+.budget-checkout .total p {
+    font-weight: 600;
+}
+
+.budget-checkout button {
+    margin-top: 1.12rem;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--primary-color);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 0.87rem;
+    line-height: 100%;
+    padding-block: 0.56rem;
+    padding-inline: 2.87rem;
+}

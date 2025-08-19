@@ -1,8 +1,10 @@
 :root {
     --primary-color: #DEE33E;
     --secundary-color: #9FA324;
+    --danger-color: #EB4335;
     --black: #000;
     --jet: #2e2f30;
+    --jet-light: #71717A;
     --isabelline-light: #fcf9f4;
 }
 
@@ -17,9 +19,15 @@
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     display: flex;
     height: 100vh;
     width: 100%;
     background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
 }

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
+import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, startAt, endAt } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"
 
 const firebaseConfig = {
     apiKey: "AIzaSyC-eFNNNn6ZqS4aumhHNCFKUkzeOLl99gU",
@@ -14,17 +14,35 @@ const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 
 export async function saveClient(clientName, clientLastname, clientEmail, clientPhone) {
+    const keywords = [
+        clientName.toLowerCase(),
+        clientLastname.toLowerCase(),
+        `${clientName.toLowerCase()} ${clientLastname.toLowerCase()}`,
+    ]
+
     return await addDoc(collection(db, "clientes"), {
         clientName, 
         clientLastname, 
         clientEmail, 
-        clientPhone 
+        clientPhone,
+        keywords
     })
 }
 
-export async function listClients() {
-    const query = await getDocs(collection(db, "clientes"))
-    let list = []
-    query.forEach((doc) => list.push(doc.data()))
+export async function getClients(clientName = "") {
+    let q;
+
+    if(clientName) {
+        q = query(
+            collection(db, "clientes"),
+            where("keywords", "array-contains", clientName.toLowerCase())
+        )
+    } else {
+        q = collection(db, "clientes")
+    }
+
+    const snapshot = await getDocs(q)
+    const list = []
+    snapshot.forEach(doc => list.push(doc.data()))
     return list
 }

@@ -1,11 +1,68 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento</title>
-</head>
-<body>
-    
-</body>
-</html>
+<header class="budget-header">
+    <div class="menu-infos">
+        <h1>Orçamento</h1>
+        <img src="/assets/icons/file-text.svg" alt="icone" width="24" height="24">
+    </div>
+    <div class="divider"></div>
+</header>
+
+<main class="budget-main">
+    <div class="budget-customer">
+        <img src="/assets/images/cliente.svg" alt="icone">
+        <div class="customer-info">
+            <div>
+                <h2>Cliente</h2>
+                <p>Adicione o cliente</p>
+            </div>
+            <img src="/assets/icons/angle-right.svg" alt="icone" width="12" height="12">
+        </div>
+    </div>
+    <div class="budget-catalogs">
+        <div class="budget-catalog">
+            <div>
+                <img src="/assets/icons/plus-circle.svg" alt="icone" width="24" height="24">
+                <p>Adicionar Serviços</p>
+            </div>
+            <img src="/assets/icons/angle-right.svg" alt="icone" width="12" height="12">
+        </div>
+        <div class="budget-catalog">
+            <div>
+                <img src="/assets/icons/plus-circle.svg" alt="icone" width="24" height="24">
+                <p>Adicionar Produto</p>
+            </div>
+            <img src="/assets/icons/angle-right.svg" alt="icone" width="12" height="12">
+        </div>
+        <div class="budget-catalog">
+            <div>
+                <img src="/assets/icons/plus-circle.svg" alt="icone" width="24" height="24">
+                <p>Adicionar Fotos</p>
+            </div>
+            <img src="/assets/icons/scan-qr.svg" alt="icone" width="17" height="17">
+        </div>
+        <div class="budget-buttons">
+            <button type="button" class="edit-item">Editar item</button>
+            <button type="button" class="remove-item">Remover item</button>
+        </div>
+    </div>
+    <div class="budget-checkout">
+        <div class="apply-discount">
+            <div>
+                <h2>Aplicar desconto</h2>
+                <p>R$<span>0,00</span></p>
+            </div>
+            <img src="/assets/icons/angle-right.svg" alt="icone" width="12" height="12">
+        </div>
+        
+        <div>
+            <div class="subtotal">
+                <h2>Subtotal</h2>
+                <p>R$<span>0.00</span></p>
+            </div>
+            <div class="total">
+                <h2>Total</h2>
+                <p>R$<span>0.00</span></p>
+            </div>
+        </div>
+        <button type="button">Gerar Orçamento</button>
+    </div>
+</main>
