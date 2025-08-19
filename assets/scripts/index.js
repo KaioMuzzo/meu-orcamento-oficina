@@ -1,8 +1,14 @@
-import { saveClient, getClients } from "./firebase.js"
+import { saveClient, getClients, checkAuth, logout } from "./firebase.js"
 
 const links = document.querySelectorAll(".navigation")
 const content = document.getElementById("contentBody")
 const bottomLinks = document.querySelectorAll(".bottom-navigation")
+
+checkAuth((user) => {
+    if(!user) {
+        window.location.href = "/pages/login.html"
+    }
+})
 
 links.forEach(link => {
     link.addEventListener("click", function(e) {
@@ -70,7 +76,7 @@ function initClients() {
         const clientLastname = document.getElementById("client-lastname").value
         const clientEmail = document.getElementById("client-email").value
         const clientPhone = document.getElementById("client-phone").value
-        await saveClient(clientName, clientLastname, clientEmail, clientPhone)
+        await saveClient(capitalize(clientName), capitalize(clientLastname), clientEmail, clientPhone)
         addSuccess.style.display = "flex"
         newClientMenu.style.display = "none"
         newClientForm.reset()
@@ -113,12 +119,22 @@ function textNormalize(str) {
         .replace(/ç/g, "c")
 }
 
+function capitalize(text) {
+    text = text.trim().replace(/\s+/g, " ")
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+}
+
 function menuSetActive(classRef, link) {
     document.querySelectorAll(classRef).forEach(li => li.classList.remove("active"))
     link.parentElement.classList.add("active")
 }
 
 function alterPage(page) {
+    if(page === "dashboard") {
+        logout()
+        return
+    }
+
     fetch(`pages/${page}.html`)
     .then(res => res.text())
     .then(data => {

@@ -15,15 +15,15 @@ img.logo {
     margin-bottom: 1.12rem;
 }
 
-.user-login {
+.user-register {
     margin-inline: 1.25rem;
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 4px 52px 0px #00000026;
-    padding: 1.06rem 1.37rem 2.18rem 1.37rem;
+    padding: 1.06rem 1.37rem 1.43rem 1.37rem;
 }
 
-.user-login h1 {
+.user-register h1 {
     font-weight: 600;
     font-size: 2rem;
     line-height: 140%;
@@ -32,7 +32,7 @@ img.logo {
     margin-bottom: 2rem;
 }
 
-.user-login form input.information {
+.user-register form input.information {
     font-family: 'Outfit', sans-serif;
     width: 100%;
     height: 56px;
@@ -46,55 +46,57 @@ img.logo {
     color: #A0AEC0;
 }
 
-.user-login form input.information:focus {
+.user-register form input.information:focus {
     outline: 1px solid var(--primary-color);
     background-color: #FFF;
 }
 
-.user-login form input[type="email"] {
-    margin-bottom: 0.62rem;
-}
-
-.user-login form input[type="password"] {
-    margin-bottom: 1.87rem;
-}
-
-.user-login form div.remember-area {
+.user-register form div.user-full-name-info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.93rem;
+    gap: 0.37rem;
+    margin-bottom: 0.75rem;
 }
 
-.user-login form div.remember-check {
+.user-register form input[type="email"] {
+    margin-bottom: 0.75rem;
+}
+
+.user-register form input[type="password"] {
+    margin-bottom: 0.75rem;
+}
+
+.user-register form div.terms-conditions-area {
     display: flex;
     align-items: center;
+    margin-bottom: 0.75rem;
 }
 
-.user-login form input[type="radio"] {
+.user-register form input[type="radio"] {
     width: 20px;
     height: 20px;
     margin-right: 0.75rem;
     border: 1px solid #CBD5E0;
 }
 
-.user-login form label[for="remember-user"] {
+.user-register form label[for="terms-conditions"] {
     font-weight: 500;
-    font-size: 0.75rem;
-    line-height: 175%;
-    color: #111827;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.2px;
+    color: #04091E;
     vertical-align: middle;
 }
 
-.user-login form a.forget-password {
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 175%;
+.user-register form a.clickable-terms-conditions {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.2px;
     color: var(--secundary-color);
     text-decoration: none;
 }
 
-.user-login form button {
+.user-register form button {
     width: 100%;
     height: 3.50rem;
     border: none;
@@ -104,38 +106,38 @@ img.logo {
     font-weight: 600;
     font-size: 1rem;
     line-height: 175%;
-    margin-bottom: 0.68rem;
+    margin-bottom: 1.31rem;
 }
 
-.user-login .divider {
+.user-register .divider {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1.12rem;
+    margin-bottom: 1.50rem;
 }
 
-.user-login .divider p {
+.user-register .divider p {
     font-weight: 500;
     font-size: 1rem;
     line-height: 175%;
     color: #718096;
 }
 
-.user-login .divider::before,
-.user-login .divider::after {
+.user-register .divider::before,
+.user-register .divider::after {
     content: '';
     flex-grow: 1;
     height: 1px;
     background-color: #EEEFF2;
 }
 
-.user-login .social-login {
+.user-register .social-register {
     display: flex;
     gap: 1rem;
-    margin-bottom: 0.68rem;
+    margin-bottom: 1rem;
 }
 
-.user-login .social-login button {
+.user-register .social-register button {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -153,7 +155,7 @@ img.logo {
     color: #111827;
 }
 
-.user-login .user-register {
+.user-register .user-login {
     text-align: center;
     font-weight: 500;
     font-size: 1rem;
@@ -162,7 +164,7 @@ img.logo {
     color: #718096;
 }
 
-.user-login a.user-register {
+.user-register a.user-login {
     color: var(--secundary-color);
     text-decoration: none;
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+<body>
+    <img class="logo" src="/assets/images/sua-logo-preta.svg" alt="logo" width="199" height="89.72">
+    <div class="user-login">
+        <h1>Acesse sua conta</h1>
+        <form action="" id="user-login">
+            <label for="email-user"><input class="information" type="email" id="email-user" name="email-user" placeholder="Email"></label>
+            <label for="password-user"><input class="information" type="password" id="password-user" name="password-user" placeholder="Senha"></label>
+            <div class="remember-area">
+                <div class="remember-check">
+                    <input type="radio" id="remember-user" name="remember-user">
+                    <label for="remember-user">Lembrar meus dados</label>
+                </div>
+                <a class="forget-password" href="recuperar-senha.html">Esqueceu a senha?</a>
+            </div>
+            <button type="submit">Entrar com e-mail</button>
+        </form>
+        <div class="divider">
+            <p>Ou entre com</p>
+        </div>
+        <div class="social-login">
+            <button><img src="/assets/icons/google.svg" alt="icone" width="22" height="22">Google</button>
+            <button><img src="/assets/icons/apple.svg" alt="icone" width="20" height="22">Apple</button>
+        </div>
+        <p class="user-register">Não tem uma conta? <a href="cadastro.html" class="user-register">Cadastre-se</a></p>
+    </div>
+    <script type="module" src="/assets/scripts/account.js"></script>
+</body>
+</html>

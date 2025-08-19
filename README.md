@@ -1,87 +1,27 @@
-## 📂 Estrutura de Arquivos
+# Sistema
 
-Aqui está a organização das pastas e principais arquivos do projeto:
+## Descrição
+Um sistema simples de gerenciamento de estoque, com foco em criação de orçamentos de produtos ou serviços. Permite cadastro e autenticação de usuários via Firebase e armazenamento de dados de clientes para facilitar o controle e consulta.
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+
+## Funcionalidades
 ```text
-meu-orcamento-oficina/
-├── 📁 assets/
-│   ├── 📁 css/
-│   │   └── style.css           (Estilo geral)
-│   ├── 📁 js/
-│   │   ├── auth.js             (Lógica de login e cadastro)
-│   │   ├── dashboard.js        (Dashboard da oficina)
-│   │   ├── orcamentos.js       (CRUD dos orçamentos)
-│   │   ├── estoque.js          (Controle de estoque)
-│   │   ├── relatorios.js       (Relatórios financeiros)
-│   │   └── cliente.js          (Tela do cliente ver orçamento)
-│   └── 📁 libs/                 (Bibliotecas externas)
-│
-├── 📁 pages/
-│   ├── login.html              (Tela de login)
-│   ├── cadastro.html           (Tela de cadastro)
-│   ├── dashboard.html          (Painel principal da oficina)
-│   ├── orcamentos.html         (Listagem de orçamentos)
-│   ├── criar-orcamento.html    (Painel para criar orçamento)
-│   ├── estoque.html            (Tela de estoque)
-│   ├── relatorios.html         (Tela de relatórios financeiros)
-│   └── cliente-orcamento.html  (Tela para o cliente ver e aceitar/rejeitar)
-│
-├── index.html                   
-├── README.md                    (Documentação do projeto)
-└── firebase.json
-```
-## 🎨 Paleta Profissional e Moderna
-```text
-Cor				Código HEX		Uso
-Verde suave			#10B981			Sucesso / orçamentos aprovados
-Vermelho alaranjado		#F87171			Erros / pendências / recusas
-Amarelo escuro			#FBBF24			Avisos ou “em andamento”
+- Cadastro e login de usuários com autenticação Firebase.
+- Criação, edição e listagem de clientes.
+- Geração de orçamentos de produtos e serviços.
+- Pesquisa e filtragem de clientes.
+- Sistema seguro de armazenamento de dados por usuário.
+- Interface responsiva e organizada para facilitar a navegação.
 ```
 
-## 🗺️ Telas do App (Mobile)
+## Tecnologias Utilizadas
 ```text
-🔑 Autenticação
-	Login
-	Cadastro
-	Esqueceu senha
-
-🏠 Dashboard da Oficina
-	Total de orçamentos no mês
-	Quantos estão pendentes
-	Quantos foram aprovados
-	Valor total vendido
-
-📜 Listagem de Orçamentos
-	Filtros: pendentes, aprovados, recusados, finalizados
-	Ver detalhes
-	Editar (enquanto pendente)
-	Finalizar orçamento
-	Cancelar
-
-📝 Criar Orçamento
-	Dados do cliente (nome, CPF/CNPJ, contato)
-	Descrição do serviço
-	Itens e peças (com valor, quantidade, mão de obra, etc.)
-	Total automático
-	Gerar link para envio ao cliente (aceitar ou recusar)
-
-📦 Estoque
-	Lista de peças e ferramentas
-	Controle simples: adicionar, remover, editar quantidade
-	Marcar itens como indisponíveis ou esgotados
-
-💰 Relatório Financeiro
-	Filtros por data
-	Total vendido no período
-	Listagem de orçamentos finalizados
-	Exportar em PDF ou Excel (opcional)
-
-✅ Tela do Cliente (Link de Orçamento)
-	Ver detalhes do orçamento
-	Botão para "Aceitar" ou "Recusar"
-	Espaço para observações ou dúvidas (opcional)
-
-⚙️ Ferramentas
-	Front: HTML + CSS + JS
-	Backend: Node.js + Firebase
-	Banco: Firestore
+- HTML5
+- CSS3 (com Flexbox e Grid)
+- JavaScript (ES6+)
+- Firebase (Authentication e Firestore)
 ```
